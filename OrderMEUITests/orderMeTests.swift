@@ -21,7 +21,7 @@ class orderMeTests: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        // Put teardown code here. This method is called after the invocation of each test method in the class. Well be called after ent of the test. Uses for some clean up.
     }
     
     func testExample() {
