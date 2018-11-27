@@ -16,10 +16,6 @@ class BaseTest: XCTestCase {
         app.launch()
     }
     
-    override func tearDown() {
-        //Put teardown method code here. This method is called after the invocation of each test in the class
-    }
-    
     func testExample() {
         //Use recording to get started writing UI tests.
         //Use XCAssert and related functons to verify your tests produce the correct results.
