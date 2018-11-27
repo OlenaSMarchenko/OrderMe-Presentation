@@ -10,9 +10,10 @@ import XCTest
 
 class BaseTest: XCTestCase {
     
-    override func setUp() {
+    override func setUp() {       
         continueAfterFailure = false
-        XCUIApplication().launch()
+        let app = XCUIApplication()
+        app.launch()
     }
     
     func testExample() {
