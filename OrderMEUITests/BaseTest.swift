@@ -18,22 +18,26 @@ class BaseTest: XCTestCase {
     }
     
     func testBringAMenu() {
-        let loginLaterButton = app.buttons["loginLaterButton"]
-        loginLaterButton.tap()
+        let loginScreen = LoginScreen()
+        loginScreen.tapOnLoginLaterBtn()
+
+        let selectRestaurantScreen = SelectRestaurantScreen()
+        selectRestaurantScreen.tapOnRestaurant()
         
-        let restaurant = app.tables.staticTexts["Ocean Seafood"]
-        restaurant.tap()
+        let restaurantScreen = RestaurantScreen()
+        restaurantScreen.tapOnDetectTable()
         
-        app.collectionViews.staticTexts["Detect table"].tap()
+        let detectTableScreen = DetectTableScreen()
+        detectTableScreen.enterTableNumber(numberOfTable: 2)
+        detectTableScreen.tapOnSelectTableBtn()
         
-        app.textFields["tableNumberTextField"].tap()
-        app.textFields["tableNumberTextField"].typeText("2")
-        app.buttons["Select table"].tap()
+        let restaurantScreen2 = RestaurantScreen()
+        restaurantScreen2.tapOnCallAWaiterBtn()
+        restaurantScreen2.tapOnBringAMenuBtn()
         
-        app.collectionViews.staticTexts["Call a waiter"].tap()
-        app.alerts["The waiter is on his way"].buttons["Bring a menu"].tap()
         sleep(2)
-        app.alerts["Got it!"].buttons["OK"].tap()
+        XCTAssertTrue(restaurantScreen2.gotItAlertExists)
+        restaurantScreen2.tapOnOkBtn()
     }
     
     func testChooseTwoRestaurants() {
