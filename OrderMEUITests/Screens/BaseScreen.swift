@@ -13,6 +13,8 @@ class BaseScreen {
     static let app = XCUIApplication()
     static let buttons = app.buttons
     
+    let timeout: TimeInterval = 5
+    
     func tap(_ element: XCUIElement) {
         element.tap()
     }

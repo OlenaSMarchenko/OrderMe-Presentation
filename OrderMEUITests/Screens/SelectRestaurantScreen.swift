@@ -11,9 +11,23 @@ import XCTest
 
 class SelectRestaurantScreen: BaseScreen {
 
-    private let restaurantOceanSeafood: XCUIElement = app.tables.staticTexts["Ocean Seafood"]
+    private let restaurant: XCUIElement
     
-    func tapOnRestaurantOceanSeafood() {
-        tap(restaurantOceanSeafood)
+    init(restaurantName: String) {
+        restaurant = BaseScreen.app.tables.staticTexts[restaurantName]
+        super.init() //BaseScreen arguments
+        visible()
+    }
+    
+    func tapOnRestaurant() -> RestaurantScreen {
+        tap(restaurant)
+        return RestaurantScreen()
+    }
+}
+
+// MARK: - Visibility
+extension SelectRestaurantScreen {
+    func visible() {
+        XCTAssertTrue(restaurant.waitForExistence(timeout: timeout), "SelectRestaurantScreen is not presented")
     }
 }

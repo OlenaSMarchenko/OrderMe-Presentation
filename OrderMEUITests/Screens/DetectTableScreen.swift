@@ -14,11 +14,25 @@ class DetectTableScreen: BaseScreen {
     private let tableNumberField = app.textFields["tableNumberTextField"]
     private let selectTableBtn = buttons["Select table"]
     
-    func enterTableNumber(numberOfTable: Int) {
-        type(element: tableNumberField, text: numberOfTable.description)
+    override init() {
+        super.init()
+        visible()
     }
     
-    func tapOnSelectTableBtn() {
+    func enterTableNumber(numberOfTable: Int) -> DetectTableScreen {
+        type(element: tableNumberField, text: numberOfTable.description)
+        return self
+    }
+    
+    func tapOnSelectTableBtn() -> RestaurantScreen {
         tap(selectTableBtn)
+        return RestaurantScreen()
+    }
+}
+
+// MARK: - Visibility
+extension DetectTableScreen {
+    func visible() {
+        XCTAssertTrue(tableNumberField.waitForExistence(timeout: timeout), "DetectTableScreen is not presented")
     }
 }
