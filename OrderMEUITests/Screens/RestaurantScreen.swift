@@ -17,12 +17,18 @@ class RestaurantScreen: BaseScreen {
     private let gotItAlert: XCUIElement = app.alerts["Got it!"]
     private let okBtn: XCUIElement = buttons["OK"]
     
+    override init() {
+        super.init()
+        visible()
+    }
+   
     var gotItAlertExists: Bool {
-        return gotItAlert.exists
+        return gotItAlert.waitForExistence(timeout: timeout)
     }
     
-    func tapOnDetectTable() {
+    func tapOnDetectTable() -> DetectTableScreen {
         tap(detectTableBtn)
+        return DetectTableScreen()
     }
     
     func tapOnCallAWaiterBtn() {
@@ -38,3 +44,9 @@ class RestaurantScreen: BaseScreen {
     }
 }
 
+// MARK: - Visibility
+extension RestaurantScreen {
+    func visible() {
+        XCTAssertTrue(callAWaiterBtn.waitForExistence(timeout: timeout), "Restaurant screen is not presented")
+    }
+}
