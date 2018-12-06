@@ -22,7 +22,7 @@ class BaseTest: XCTestCase {
         loginScreen.tapOnLoginLaterBtn()
 
         let selectRestaurantScreen = SelectRestaurantScreen()
-        selectRestaurantScreen.tapOnRestaurant()
+        selectRestaurantScreen.tapOnRestaurantOceanSeafood()
         
         let restaurantScreen = RestaurantScreen()
         restaurantScreen.tapOnDetectTable()

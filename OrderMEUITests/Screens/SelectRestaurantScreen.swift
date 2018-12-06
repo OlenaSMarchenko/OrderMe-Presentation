@@ -11,9 +11,9 @@ import XCTest
 
 class SelectRestaurantScreen: BaseScreen {
 
-    private let restaurant: XCUIElement = app.tables.staticTexts["Ocean Seafood"]
+    private let restaurantOceanSeafood: XCUIElement = app.tables.staticTexts["Ocean Seafood"]
     
-    func tapOnRestaurant() {
-        tap(restaurant)
+    func tapOnRestaurantOceanSeafood() {
+        tap(restaurantOceanSeafood)
     }
 }
