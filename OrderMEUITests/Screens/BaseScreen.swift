@@ -24,4 +24,3 @@ class BaseScreen {
         element.typeText(text)
     }
 }
-//*

@@ -29,6 +29,7 @@ class RestaurantScreen: BaseScreen {
         return gotItAlert.waitForExistence(timeout: timeout)
     }
     
+    @discardableResult
     func tapOnDetectTable() -> DetectTableScreen {
         tap(detectTableBtn)
         return DetectTableScreen()
@@ -46,6 +47,7 @@ class RestaurantScreen: BaseScreen {
         tap(okBtn)
     }
     
+    @discardableResult
     func tapOnMenuBtn() -> MenuScreen {
         tap(menuBtn)
         return MenuScreen()
@@ -55,12 +57,13 @@ class RestaurantScreen: BaseScreen {
         tap(backBtn)
     }
     
+    @discardableResult
     func tapOnReservation() -> ReservationScreen {
         tap(reservationBtn)
         return ReservationScreen()
     }
 }
-//****
+
 // MARK: - Visibility
 extension RestaurantScreen {
     func visible() {

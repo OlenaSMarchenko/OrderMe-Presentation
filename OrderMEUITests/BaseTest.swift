@@ -44,13 +44,12 @@ class BaseTest: XCTestCase {
         let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: beautyEssex)
         let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
         restaurantScreen.tapOnBackBtn()
-        
-        _ = SelectRestaurantScreen(restaurantName: oceanSeafood)
-        _ = selectRestaurantScreen.tapOnRestaurant()
-        let detectTableScreen = restaurantScreen.tapOnDetectTable()
-        _ = detectTableScreen.enterTableNumber(numberOfTable: 6).tapOnSelectTableBtn()
-    }
 
+        _ = SelectRestaurantScreen(restaurantName: oceanSeafood)
+        selectRestaurantScreen.tapOnRestaurant()
+        let detectTableScreen = restaurantScreen.tapOnDetectTable()
+        detectTableScreen.enterTableNumber(numberOfTable: 6).tapOnSelectTableBtn()
+    }
     
     func testWatchMenu() {
         let loginScreen = LoginScreen()
@@ -75,7 +74,5 @@ class BaseTest: XCTestCase {
         
         XCTAssertTrue(reservationScreen.didNotLoginAlertExists, "You did not login does not exist")
         reservationScreen.tapOnCancelBtn()
-
-        
     }
 }

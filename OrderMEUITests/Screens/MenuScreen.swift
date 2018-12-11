@@ -19,6 +19,7 @@ class MenuScreen: BaseScreen {
         visible()
     }
     
+    @discardableResult
     func tapOnBackBtn() -> RestaurantScreen {
         tap(backBtn)
         return RestaurantScreen()
@@ -28,7 +29,7 @@ class MenuScreen: BaseScreen {
         tap(bucketBtn)
     }
 }
-//*
+
 // MARK: - Visibility
 
 extension MenuScreen {

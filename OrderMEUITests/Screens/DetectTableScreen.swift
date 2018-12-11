@@ -24,12 +24,13 @@ class DetectTableScreen: BaseScreen {
         return self
     }
     
+    @discardableResult
     func tapOnSelectTableBtn() -> RestaurantScreen {
         tap(selectTableBtn)
         return RestaurantScreen()
     }
 }
-//***
+
 // MARK: - Visibility
 extension DetectTableScreen {
     func visible() {
