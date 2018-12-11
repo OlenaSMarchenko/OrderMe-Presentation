@@ -29,7 +29,7 @@ class DetectTableScreen: BaseScreen {
         return RestaurantScreen()
     }
 }
-
+//***
 // MARK: - Visibility
 extension DetectTableScreen {
     func visible() {

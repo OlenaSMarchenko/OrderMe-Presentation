@@ -9,42 +9,51 @@
 import Foundation
 import XCTest
 
-class DetectReservationScreen: BaseScreen {
+class ReservationScreen: BaseScreen {
     
-    private let phoneNumberField = app.textFields["phoneNumberTextField"]
-    private let selectPhoneNumberBtn = buttons["Phone number"]
-    private let numberOfPeopleField = app.textFields["numberOfPeopleTextField"]
-    private let selectNumberOfPeoplerBtn = buttons["Number of people"]
-
+    private let phoneNumberField = app.textFields["Phone number"]
+    private let numberOfPeopleField = app.textFields["Number of people"]
+    private let didNotLoginAlert: XCUIElement = app.alerts["You did not login"]
+    private let cancelBtn = buttons["Cancel"]
+    private let bookBtn = buttons["Book"]
+    private let pickADate = app.staticTexts["Pick a date"]
+    
     override init() {
-    super.init()
-    visible()
-    }
-
-    func enterPhoneNumber(numberOfPhone: Int) -> DetectReservationScreen {
-    type(element: phoneNumberField, text: numberOfPhone.description)
-    return self
-    }
-
-    func tapOnSelectPhoneNumberBtn() -> RestaurantScreen {
-    tap(selectPhoneNumberBtn)
-    return RestaurantScreen()
+        super.init()
+        visible()
     }
     
-    func enterNumberOfPeople(numberOfPeople: Int) -> DetectReservationScreen {
+    var didNotLoginAlertExists: Bool {
+        return didNotLoginAlert.waitForExistence(timeout: timeout)
+    }
+
+    func enterPhoneNumber(numberOfPhone: Int) -> ReservationScreen {
+        type(element: phoneNumberField, text: numberOfPhone.description)
+        return self
+    }
+    
+    func enterNumberOfPeople(numberOfPeople: Int) -> ReservationScreen {
         type(element: numberOfPeopleField, text: numberOfPeople.description)
         return self
     }
     
-    func tapOnSelectNumberOfPeopleBtn() -> RestaurantScreen {
-        tap(selectNumberOfPeoplerBtn)
-        return RestaurantScreen()
+    func tapOnBookBtn() {
+        tap(bookBtn)
+    }
+    
+    func tapOnCancelBtn() {
+        tap(cancelBtn)
+    }
+    
+    func tapOnPickADate() {
+        tap(pickADate)
     }
 }
-
+//**
 // MARK: - Visibility
-extension DetectReservationScreen {
+
+extension ReservationScreen {
     func visible() {
-        XCTAssertTrue(phoneNumberField.waitForExistence(timeout: timeout), "DetectReservationScreen is not presented")
+        XCTAssertTrue(bookBtn.waitForExistence(timeout: timeout), "ReservationScreen is not presented")
     }
 }
