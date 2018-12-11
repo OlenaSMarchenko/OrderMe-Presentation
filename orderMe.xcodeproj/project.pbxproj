@@ -57,6 +57,8 @@
 		E1E8069D21B7458600133D26 /* RestaurantScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8069C21B7458600133D26 /* RestaurantScreen.swift */; };
 		E1E8069F21B7465500133D26 /* DetectTableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8069E21B7465500133D26 /* DetectTableScreen.swift */; };
 		E8E4BF6160F8C100D1B12500 /* Pods_orderMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BAD16F67A289A8CEBEDC646 /* Pods_orderMe.framework */; };
+		F9E91F6F21BF910800636551 /* DetectMenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E91F6E21BF910800636551 /* DetectMenuScreen.swift */; };
+		F9E91F7121BF9E9100636551 /* DetectReservationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E91F7021BF9E9100636551 /* DetectReservationScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +134,8 @@
 		E1E8069E21B7465500133D26 /* DetectTableScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectTableScreen.swift; sourceTree = "<group>"; };
 		EDDBFC792085FA8700A45B71 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDBFC7B2085FA9200A45B71 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E91F6E21BF910800636551 /* DetectMenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectMenuScreen.swift; sourceTree = "<group>"; };
+		F9E91F7021BF9E9100636551 /* DetectReservationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectReservationScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +322,8 @@
 				E1E8069A21B7440A00133D26 /* SelectRestaurantScreen.swift */,
 				E1E8069C21B7458600133D26 /* RestaurantScreen.swift */,
 				E1E8069E21B7465500133D26 /* DetectTableScreen.swift */,
+				F9E91F6E21BF910800636551 /* DetectMenuScreen.swift */,
+				F9E91F7021BF9E9100636551 /* DetectReservationScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -532,6 +538,8 @@
 				E1E8069B21B7440A00133D26 /* SelectRestaurantScreen.swift in Sources */,
 				E1E8069F21B7465500133D26 /* DetectTableScreen.swift in Sources */,
 				866D008421831084009F20B1 /* BaseTest.swift in Sources */,
+				F9E91F7121BF9E9100636551 /* DetectReservationScreen.swift in Sources */,
+				F9E91F6F21BF910800636551 /* DetectMenuScreen.swift in Sources */,
 				E1E8069D21B7458600133D26 /* RestaurantScreen.swift in Sources */,
 				E1E8069721B73D5700133D26 /* LoginScreen.swift in Sources */,
 				E1E8069921B740B500133D26 /* BaseScreen.swift in Sources */,

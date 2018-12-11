@@ -13,9 +13,12 @@ class RestaurantScreen: BaseScreen {
     
     private let detectTableBtn: XCUIElement = app.collectionViews.staticTexts["Detect table"]
     private let callAWaiterBtn: XCUIElement = app.collectionViews.staticTexts["Call a waiter"]
+    private let detectMenuBtn: XCUIElement = app.collectionViews.staticTexts["Menu"]
+    private let detectReservationBtn: XCUIElement = app.collectionViews.staticTexts["Reservation"]
     private let bringAMenuBtn: XCUIElement = buttons["Bring a menu"]
     private let gotItAlert: XCUIElement = app.alerts["Got it!"]
     private let okBtn: XCUIElement = buttons["OK"]
+    private let backBtn: XCUIElement = buttons["Back 50"]
     
     override init() {
         super.init()
@@ -41,6 +44,20 @@ class RestaurantScreen: BaseScreen {
     
     func tapOnOkBtn() {
         tap(okBtn)
+    }
+    
+    func tapOnBackBtn() {
+        tap(backBtn)
+    }
+    
+    func tapOnDetectMenu() -> DetectMenuScreen {
+        tap(detectMenuBtn)
+        return DetectMenuScreen()
+    }
+    
+    func tapOnDetectReservation() -> DetectReservationScreen {
+        tap(detectReservationBtn)
+        return DetectReservationScreen()
     }
 }
 

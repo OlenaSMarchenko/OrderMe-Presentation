@@ -12,6 +12,9 @@ class BaseTest: XCTestCase {
     
     let app = XCUIApplication()
     let oceanSeafood = "Ocean Seafood"
+    let beautyEssex = "Beauty & Essex"
+    let republique = "Republique"
+    let hakkasan = "Hakkasan"
     
     override func setUp() {
         continueAfterFailure = false
@@ -35,34 +38,42 @@ class BaseTest: XCTestCase {
     }
     
     func testChooseTwoRestaurants() {
-        let loginLaterButton = app.buttons["loginLaterButton"]
-        loginLaterButton.tap()
+        let loginScreen = LoginScreen()
+        loginScreen.tapOnLoginLaterBtn()
 
-        let restaurant = app.tables.staticTexts["Beauty & Essex"]
-        restaurant.tap()
-
-        app.buttons["Back 50"].tap()
-
-        let restaurant2 = app.tables.staticTexts["Ocean Seafood"]
-        restaurant2.tap()
-
-        app.collectionViews.staticTexts["Detect table"].tap()
-
-        app.textFields["tableNumberTextField"].tap()
-        app.textFields["tableNumberTextField"].typeText("6")
-
-        app.buttons["Select table"].tap()
+        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: beautyEssex)
+        let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
+        restaurantScreen.tapOnBackBtn()
+        
+        _ = SelectRestaurantScreen(restaurantName: oceanSeafood)
+        _ = selectRestaurantScreen.tapOnRestaurant()
+        let detectTableScreen = restaurantScreen.tapOnDetectTable()
+        _ = detectTableScreen.enterTableNumber(numberOfTable: 6).tapOnSelectTableBtn()
     }
-//
-//    func testWatchMenu() {
-//        let loginLaterButton = app.buttons["loginLaterButton"]
-//        loginLaterButton.tap()
-//
-//        let restaurant = app.tables.staticTexts["Republique"]
-//        restaurant.tap()
-//
-//        app.collectionViews.textFields["Menu"].tap()
-//
-//        app.buttons["Back 50"].tap()
-//    }
+
+    
+    func testWatchMenu() {
+        let loginScreen = LoginScreen()
+        loginScreen.tapOnLoginLaterBtn()
+        
+        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: republique)
+        let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
+        _ = restaurantScreen.tapOnDetectMenu()
+        _ = restaurantScreen.tapOnBackBtn()
+    }
+    
+    func testBookingTable () {
+        let loginScreen = LoginScreen()
+        loginScreen.tapOnLoginLaterBtn()
+        
+        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: hakkasan)
+        let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
+        let detectReservationScreen = restaurantScreen.tapOnDetectReservation()
+        _ = detectReservationScreen.enterPhoneNumber(numberOfPhone: 3109876543).tapOnSelectPhoneNumberBtn()
+        _ = detectReservationScreen.enterPhoneNumber(numberOfPhone: 3).tapOnSelectNumberOfPeopleBtn()
+        
+//        app.staticTexts["Pick a date"].tap()
+//        app.buttons["Book"].tap(
+
+    }
 }

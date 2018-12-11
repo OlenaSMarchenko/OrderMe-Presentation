@@ -33,6 +33,6 @@ class DetectTableScreen: BaseScreen {
 // MARK: - Visibility
 extension DetectTableScreen {
     func visible() {
-        XCTAssertTrue(tableNumberField.waitForExistence(timeout: timeout), "DetectTableScreen is not presented")
+        XCTAssertTrue(tableNumberField.waitForExistence(timeout: timeout), "Detect Table Screen is not presented")
     }
 }
