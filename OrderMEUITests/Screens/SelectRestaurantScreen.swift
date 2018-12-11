@@ -19,12 +19,13 @@ class SelectRestaurantScreen: BaseScreen {
         visible()
     }
     
+    @discardableResult
     func tapOnRestaurant() -> RestaurantScreen {
         tap(restaurant)
         return RestaurantScreen()
     }
 }
-//*
+
 // MARK: - Visibility
 extension SelectRestaurantScreen {
     func visible() {

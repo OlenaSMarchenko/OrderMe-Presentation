@@ -22,7 +22,7 @@ class LoginScreen: BaseScreen {
         tap(loginLaterButton)
     }
 }
-//*
+
 // MARK: - Visibility
 extension LoginScreen {
     func visible() {
