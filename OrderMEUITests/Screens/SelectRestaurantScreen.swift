@@ -24,7 +24,7 @@ class SelectRestaurantScreen: BaseScreen {
         return RestaurantScreen()
     }
 }
-
+//*
 // MARK: - Visibility
 extension SelectRestaurantScreen {
     func visible() {

@@ -58,8 +58,8 @@ class BaseTest: XCTestCase {
         
         let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: republique)
         let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
-        _ = restaurantScreen.tapOnDetectMenu()
-        _ = restaurantScreen.tapOnBackBtn()
+        let menuScreen = restaurantScreen.tapOnMenuBtn()
+        menuScreen.tapOnBackBtn()
     }
     
     func testBookingTable () {
@@ -68,12 +68,14 @@ class BaseTest: XCTestCase {
         
         let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: hakkasan)
         let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
-        let detectReservationScreen = restaurantScreen.tapOnDetectReservation()
-        _ = detectReservationScreen.enterPhoneNumber(numberOfPhone: 3109876543).tapOnSelectPhoneNumberBtn()
-        _ = detectReservationScreen.enterPhoneNumber(numberOfPhone: 3).tapOnSelectNumberOfPeopleBtn()
+        let reservationScreen = restaurantScreen.tapOnReservation()
+        reservationScreen.enterNumberOfPeople(numberOfPeople: 2).enterPhoneNumber(numberOfPhone: 576797847).tapOnPickADate()
         
-//        app.staticTexts["Pick a date"].tap()
-//        app.buttons["Book"].tap(
+        reservationScreen.tapOnBookBtn()
+        
+        XCTAssertTrue(reservationScreen.didNotLoginAlertExists, "You did not login does not exist")
+        reservationScreen.tapOnCancelBtn()
 
+        
     }
 }
