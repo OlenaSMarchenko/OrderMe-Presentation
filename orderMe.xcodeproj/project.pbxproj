@@ -51,6 +51,7 @@
 		43A8036F203EDF5F005C6EB6 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A8036E203EDF5F005C6EB6 /* AccessibilityIdentifiers.swift */; };
 		43B95CEC2059716B00E8C016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B95CEB2059716B00E8C016 /* LaunchScreen.storyboard */; };
 		866D008421831084009F20B1 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D008321831084009F20B1 /* BaseTest.swift */; };
+		E15D2CCD21C3293A00E1AD25 /* WaitresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D2CCC21C3293A00E1AD25 /* WaitresTests.swift */; };
 		E1E8069721B73D5700133D26 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8069621B73D5700133D26 /* LoginScreen.swift */; };
 		E1E8069921B740B500133D26 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8069821B740B500133D26 /* BaseScreen.swift */; };
 		E1E8069B21B7440A00133D26 /* SelectRestaurantScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8069A21B7440A00133D26 /* SelectRestaurantScreen.swift */; };
@@ -127,6 +128,7 @@
 		866D008321831084009F20B1 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		A02526015C2AC40E8E286088 /* Pods-orderMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orderMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-orderMe/Pods-orderMe.debug.xcconfig"; sourceTree = "<group>"; };
 		B2E078C118644F1F4B98483F /* Pods_OrderMEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderMEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E15D2CCC21C3293A00E1AD25 /* WaitresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitresTests.swift; sourceTree = "<group>"; };
 		E1E8069621B73D5700133D26 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E1E8069821B740B500133D26 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
 		E1E8069A21B7440A00133D26 /* SelectRestaurantScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRestaurantScreen.swift; sourceTree = "<group>"; };
@@ -160,8 +162,8 @@
 		22FB824D21758B720004B281 /* OrderMEUITests */ = {
 			isa = PBXGroup;
 			children = (
+				E15D2CCB21C328D800E1AD25 /* Tests */,
 				E1E8069521B73CE500133D26 /* Screens */,
-				866D008321831084009F20B1 /* BaseTest.swift */,
 				22FB825021758B720004B281 /* Info.plist */,
 			);
 			path = OrderMEUITests;
@@ -312,6 +314,15 @@
 				0A1E6C06FD11E1DB88A716D9 /* Pods-OrderMEUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E15D2CCB21C328D800E1AD25 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				866D008321831084009F20B1 /* BaseTest.swift */,
+				E15D2CCC21C3293A00E1AD25 /* WaitresTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		E1E8069521B73CE500133D26 /* Screens */ = {
@@ -538,6 +549,7 @@
 				F9D0C63C21C06EB800BDEFAB /* MenuScreen.swift in Sources */,
 				E1E8069B21B7440A00133D26 /* SelectRestaurantScreen.swift in Sources */,
 				E1E8069F21B7465500133D26 /* DetectTableScreen.swift in Sources */,
+				E15D2CCD21C3293A00E1AD25 /* WaitresTests.swift in Sources */,
 				866D008421831084009F20B1 /* BaseTest.swift in Sources */,
 				F9E91F7121BF9E9100636551 /* ReservationScreen.swift in Sources */,
 				E1E8069D21B7458600133D26 /* RestaurantScreen.swift in Sources */,

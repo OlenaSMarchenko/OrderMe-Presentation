@@ -11,8 +11,8 @@ import XCTest
 
 class DetectTableScreen: BaseScreen {
     
-    private let tableNumberField = app.textFields["tableNumberTextField"]
-    private let selectTableBtn = buttons["Select table"]
+    private let tableNumberField: XCUIElement = textFields["tableNumberTextField"]
+    private let selectTableBtn: XCUIElement = buttons["Select table"]
     
     override init() {
         super.init()

@@ -11,31 +11,19 @@ import XCTest
 class BaseTest: XCTestCase {
     
     let app = XCUIApplication()
-    let oceanSeafood = "Ocean Seafood"
-    let beautyEssex = "Beauty & Essex"
-    let republique = "Republique"
-    let hakkasan = "Hakkasan"
+    
+    //Restaurants Names
+    static let oceanSeafood = "Ocean Seafood"
+    static let beautyEssex = "Beauty & Essex"
+    static let republique = "Republique"
+    static let hakkasan = "Hakkasan"
     
     override func setUp() {
         continueAfterFailure = false
         app.launch()
     }
     
-    func testBringAMenu() {
-        
-        let loginScreen = LoginScreen()
-        loginScreen.tapOnLoginLaterBtn()
-
-        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: oceanSeafood)
-        let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
-        let detectTableScreen = restaurantScreen.tapOnDetectTable()
-        let restaurantScreen2 = detectTableScreen.enterTableNumber(numberOfTable: 2).tapOnSelectTableBtn()
-        restaurantScreen2.tapOnCallAWaiterBtn()
-        restaurantScreen2.tapOnBringAMenuBtn()
-        
-        XCTAssertTrue(restaurantScreen2.gotItAlertExists, "Got it alert does not exist")
-        restaurantScreen2.tapOnOkBtn()
-    }
+    
     
     func testChooseTwoRestaurants() {
         let loginScreen = LoginScreen()

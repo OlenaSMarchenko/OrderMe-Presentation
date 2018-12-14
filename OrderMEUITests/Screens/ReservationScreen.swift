@@ -11,12 +11,12 @@ import XCTest
 
 class ReservationScreen: BaseScreen {
     
-    private let phoneNumberField = app.textFields["Phone number"]
-    private let numberOfPeopleField = app.textFields["Number of people"]
-    private let didNotLoginAlert: XCUIElement = app.alerts["You did not login"]
-    private let cancelBtn = buttons["Cancel"]
-    private let bookBtn = buttons["Book"]
-    private let pickADate = app.staticTexts["Pick a date"]
+    private let phoneNumberField: XCUIElement = textFields["Phone number"]
+    private let numberOfPeopleField: XCUIElement = textFields["Number of people"]
+    private let didNotLoginAlert: XCUIElement = alerts["You did not login"]
+    private let cancelBtn: XCUIElement = buttons["Cancel"]
+    private let bookBtn: XCUIElement = buttons["Book"]
+    private let pickADate: XCUIElement = staticTexts["Pick a date"]
     
     override init() {
         super.init()

@@ -12,6 +12,9 @@ import XCTest
 class BaseScreen {
     static let app = XCUIApplication()
     static let buttons = app.buttons
+    static let alerts = app.alerts
+    static let staticTexts = app.collectionViews.staticTexts
+    static let textFields = app.textFields
     
     let timeout: TimeInterval = 5
     
