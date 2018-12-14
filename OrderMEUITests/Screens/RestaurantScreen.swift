@@ -11,12 +11,12 @@ import XCTest
 
 class RestaurantScreen: BaseScreen {
     
-    private let detectTableBtn: XCUIElement = app.collectionViews.staticTexts["Detect table"]
-    private let callAWaiterBtn: XCUIElement = app.collectionViews.staticTexts["Call a waiter"]
-    private let menuBtn: XCUIElement = app.collectionViews.staticTexts["Menu"]
-    private let reservationBtn: XCUIElement = app.collectionViews.staticTexts["Reservation"]
+    private let detectTableBtn: XCUIElement = staticTexts["Detect table"]
+    private let callAWaiterBtn: XCUIElement = staticTexts["Call a waiter"]
+    private let menuBtn: XCUIElement = staticTexts["Menu"]
+    private let reservationBtn: XCUIElement = staticTexts["Reservation"]
     private let bringAMenuBtn: XCUIElement = buttons["Bring a menu"]
-    private let gotItAlert: XCUIElement = app.alerts["Got it!"]
+    private let gotItAlert: XCUIElement = alerts["Got it!"]
     private let okBtn: XCUIElement = buttons["OK"]
     private let backBtn: XCUIElement = buttons["Back 50"]
     

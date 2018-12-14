@@ -11,8 +11,8 @@ import XCTest
 
 class MenuScreen: BaseScreen {
     
-    private let backBtn = buttons["Back 50"]
-    private let bucketBtn = buttons ["Bucket"]
+    private let backBtn: XCUIElement = buttons["Back 50"]
+    private let bucketBtn: XCUIElement = buttons ["Bucket"]
     
     override init() {
         super.init()
