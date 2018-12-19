@@ -16,7 +16,7 @@ class ReservationScreen: BaseScreen {
     private let didNotLoginAlert: XCUIElement = alerts["You did not login"]
     private let cancelBtn: XCUIElement = buttons["Cancel"]
     private let bookBtn: XCUIElement = buttons["Book"]
-    private let pickADate: XCUIElement = staticTexts["Pick a date"]
+    private let pickADate = staticTexts["Pick a date"]
     
     override init() {
         super.init()
@@ -27,11 +27,13 @@ class ReservationScreen: BaseScreen {
         return didNotLoginAlert.waitForExistence(timeout: timeout)
     }
 
+    @discardableResult
     func enterPhoneNumber(numberOfPhone: Int) -> ReservationScreen {
         type(element: phoneNumberField, text: numberOfPhone.description)
         return self
     }
     
+    @discardableResult
     func enterNumberOfPeople(numberOfPeople: Int) -> ReservationScreen {
         type(element: numberOfPeopleField, text: numberOfPeople.description)
         return self

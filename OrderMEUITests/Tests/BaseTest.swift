@@ -21,19 +21,17 @@ class BaseTest: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app.launch()
-    }
-    
-    
+    }        
     
     func testChooseTwoRestaurants() {
         let loginScreen = LoginScreen()
         loginScreen.tapOnLoginLaterBtn()
 
-        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: beautyEssex)
+        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.beautyEssex)
         let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
         restaurantScreen.tapOnBackBtn()
 
-        _ = SelectRestaurantScreen(restaurantName: oceanSeafood)
+        _ = SelectRestaurantScreen(restaurantName: BaseTest.oceanSeafood)
         selectRestaurantScreen.tapOnRestaurant()
         let detectTableScreen = restaurantScreen.tapOnDetectTable()
         detectTableScreen.enterTableNumber(numberOfTable: 6).tapOnSelectTableBtn()
@@ -43,7 +41,7 @@ class BaseTest: XCTestCase {
         let loginScreen = LoginScreen()
         loginScreen.tapOnLoginLaterBtn()
         
-        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: republique)
+        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.republique)
         let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
         let menuScreen = restaurantScreen.tapOnMenuBtn()
         menuScreen.tapOnBackBtn()
@@ -53,10 +51,11 @@ class BaseTest: XCTestCase {
         let loginScreen = LoginScreen()
         loginScreen.tapOnLoginLaterBtn()
         
-        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: hakkasan)
+        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.hakkasan)
         let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
         let reservationScreen = restaurantScreen.tapOnReservation()
-        reservationScreen.enterNumberOfPeople(numberOfPeople: 2).enterPhoneNumber(numberOfPhone: 576797847).tapOnPickADate()
+        reservationScreen.enterPhoneNumber(numberOfPhone: 576797847).enterNumberOfPeople(numberOfPeople: 2)
+        //reservationScreen.tapOnPickADate()
         
         reservationScreen.tapOnBookBtn()
         

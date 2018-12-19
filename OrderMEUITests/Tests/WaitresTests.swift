@@ -16,7 +16,7 @@ class WaiterTests: BaseTest {
         let loginScreen = LoginScreen()
         loginScreen.tapOnLoginLaterBtn()
         
-        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: oceanSeafood)
+        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.oceanSeafood)
         let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
         let detectTableScreen = restaurantScreen.tapOnDetectTable()
         let restaurantScreen2 = detectTableScreen.enterTableNumber(numberOfTable: 2).tapOnSelectTableBtn()
