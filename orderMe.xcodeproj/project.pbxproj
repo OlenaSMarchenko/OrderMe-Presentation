@@ -58,6 +58,12 @@
 		E1E8069D21B7458600133D26 /* RestaurantScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8069C21B7458600133D26 /* RestaurantScreen.swift */; };
 		E1E8069F21B7465500133D26 /* DetectTableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8069E21B7465500133D26 /* DetectTableScreen.swift */; };
 		E8E4BF6160F8C100D1B12500 /* Pods_orderMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BAD16F67A289A8CEBEDC646 /* Pods_orderMe.framework */; };
+		F9ADCD6221E6939500267707 /* ChooseRestaurantsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6121E6939500267707 /* ChooseRestaurantsTest.swift */; };
+		F9ADCD6421E694C300267707 /* WatchMenuTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6321E694C300267707 /* WatchMenuTest.swift */; };
+		F9ADCD6621E6953900267707 /* BookingTableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6521E6953900267707 /* BookingTableTest.swift */; };
+		F9ADCD6821E6973100267707 /* DishesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6721E6973100267707 /* DishesScreen.swift */; };
+		F9ADCD6A21E6974400267707 /* BucketScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6921E6974400267707 /* BucketScreen.swift */; };
+		F9ADCD6C21E6976700267707 /* ReservationRestaurantTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6B21E6976700267707 /* ReservationRestaurantTest.swift */; };
 		F9D0C63C21C06EB800BDEFAB /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D0C63B21C06EB800BDEFAB /* MenuScreen.swift */; };
 		F9E91F7121BF9E9100636551 /* ReservationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E91F7021BF9E9100636551 /* ReservationScreen.swift */; };
 /* End PBXBuildFile section */
@@ -136,6 +142,12 @@
 		E1E8069E21B7465500133D26 /* DetectTableScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectTableScreen.swift; sourceTree = "<group>"; };
 		EDDBFC792085FA8700A45B71 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDBFC7B2085FA9200A45B71 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9ADCD6121E6939500267707 /* ChooseRestaurantsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRestaurantsTest.swift; sourceTree = "<group>"; };
+		F9ADCD6321E694C300267707 /* WatchMenuTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMenuTest.swift; sourceTree = "<group>"; };
+		F9ADCD6521E6953900267707 /* BookingTableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTableTest.swift; sourceTree = "<group>"; };
+		F9ADCD6721E6973100267707 /* DishesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesScreen.swift; sourceTree = "<group>"; };
+		F9ADCD6921E6974400267707 /* BucketScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketScreen.swift; sourceTree = "<group>"; };
+		F9ADCD6B21E6976700267707 /* ReservationRestaurantTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationRestaurantTest.swift; sourceTree = "<group>"; };
 		F9D0C63B21C06EB800BDEFAB /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
 		F9E91F7021BF9E9100636551 /* ReservationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -321,6 +333,10 @@
 			children = (
 				866D008321831084009F20B1 /* BaseTest.swift */,
 				E15D2CCC21C3293A00E1AD25 /* WaitresTests.swift */,
+				F9ADCD6121E6939500267707 /* ChooseRestaurantsTest.swift */,
+				F9ADCD6321E694C300267707 /* WatchMenuTest.swift */,
+				F9ADCD6521E6953900267707 /* BookingTableTest.swift */,
+				F9ADCD6B21E6976700267707 /* ReservationRestaurantTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -335,6 +351,8 @@
 				E1E8069E21B7465500133D26 /* DetectTableScreen.swift */,
 				F9E91F7021BF9E9100636551 /* ReservationScreen.swift */,
 				F9D0C63B21C06EB800BDEFAB /* MenuScreen.swift */,
+				F9ADCD6721E6973100267707 /* DishesScreen.swift */,
+				F9ADCD6921E6974400267707 /* BucketScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -546,14 +564,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9ADCD6221E6939500267707 /* ChooseRestaurantsTest.swift in Sources */,
 				F9D0C63C21C06EB800BDEFAB /* MenuScreen.swift in Sources */,
 				E1E8069B21B7440A00133D26 /* SelectRestaurantScreen.swift in Sources */,
+				F9ADCD6421E694C300267707 /* WatchMenuTest.swift in Sources */,
 				E1E8069F21B7465500133D26 /* DetectTableScreen.swift in Sources */,
+				F9ADCD6821E6973100267707 /* DishesScreen.swift in Sources */,
 				E15D2CCD21C3293A00E1AD25 /* WaitresTests.swift in Sources */,
 				866D008421831084009F20B1 /* BaseTest.swift in Sources */,
 				F9E91F7121BF9E9100636551 /* ReservationScreen.swift in Sources */,
 				E1E8069D21B7458600133D26 /* RestaurantScreen.swift in Sources */,
+				F9ADCD6C21E6976700267707 /* ReservationRestaurantTest.swift in Sources */,
 				E1E8069721B73D5700133D26 /* LoginScreen.swift in Sources */,
+				F9ADCD6A21E6974400267707 /* BucketScreen.swift in Sources */,
+				F9ADCD6621E6953900267707 /* BookingTableTest.swift in Sources */,
 				E1E8069921B740B500133D26 /* BaseScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

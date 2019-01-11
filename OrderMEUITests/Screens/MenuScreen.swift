@@ -13,6 +13,7 @@ class MenuScreen: BaseScreen {
     
     private let backBtn: XCUIElement = buttons["Back 50"]
     private let bucketBtn: XCUIElement = buttons ["Bucket"]
+    private let pastaTypeOfFood: XCUIElement = staticTexts ["PASTA"]
     
     override init() {
         super.init()
@@ -28,12 +29,16 @@ class MenuScreen: BaseScreen {
     func tapOnBucketBtn() {
         tap(bucketBtn)
     }
+    
+    func tapOnPastaTypeOfFood() {
+        tap(pastaTypeOfFood)
+    }
 }
 
 // MARK: - Visibility
-
 extension MenuScreen {
     func visible() {
-        XCTAssertTrue(bucketBtn.waitForExistence(timeout: timeout), "MenuScreen is not presented")
+        XCTAssertTrue(backBtn.waitForExistence(timeout: timeout), "MenuScreen is not presented")
     }
 }
+
