@@ -9,9 +9,9 @@
 import Foundation
 import XCTest
 
-class ReservationRestaurantTest: BaseTest {
+class TestsOrderFood: BaseTest {
     
-    func testReservationRestaurant () {
+    func testOrderFoodWithoutLogin () {
         
         let loginScreen = LoginScreen()
         loginScreen.tapOnLoginLaterBtn()
@@ -37,7 +37,6 @@ class ReservationRestaurantTest: BaseTest {
         XCTAssertTrue(bucketScreen.didNotLoginAlertExists, "You did not login does not exist")
         bucketScreen.tapOnCancelBtn()
        
-       // app.textViews["commentTextInBucket"].tap()
     }
 }
 
