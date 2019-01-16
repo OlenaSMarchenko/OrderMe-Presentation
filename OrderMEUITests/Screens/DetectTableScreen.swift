@@ -13,7 +13,6 @@ class DetectTableScreen: BaseScreen {
     
     private let tableNumberField: XCUIElement = textFields["tableNumberTextField"]
     private let selectTableBtn: XCUIElement = buttons["Select table"]
-    private let selecttableBtn: XCUIElement = buttons["Select table"]
     
     override init() {
         super.init()
@@ -29,12 +28,6 @@ class DetectTableScreen: BaseScreen {
     func tapOnSelectTableBtn() -> RestaurantScreen {
         tap(selectTableBtn)
         return RestaurantScreen()
-    }
-    
-    @discardableResult
-    func tapOnSelecttableBtn() -> BucketScreen {
-        tap(selecttableBtn)
-        return BucketScreen()
     }
 }
 
