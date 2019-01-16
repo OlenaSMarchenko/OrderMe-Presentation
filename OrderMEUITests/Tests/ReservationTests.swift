@@ -9,9 +9,9 @@
 import Foundation
 import XCTest
 
-class BookingTableTest: BaseTest {
+class ReservationTests: BaseTest {
     
-    func testBookingTable () {
+    func testReservationWithoutLogin () {
         
         let loginScreen = LoginScreen()
         loginScreen.tapOnLoginLaterBtn()

@@ -19,7 +19,8 @@ class WaiterTests: BaseTest {
         let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.oceanSeafood)
         let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
         let detectTableScreen = restaurantScreen.tapOnDetectTable()
-        let restaurantScreen2 = detectTableScreen.enterTableNumber(numberOfTable: 2).tapOnSelectTableBtn()
+        detectTableScreen.enterTableNumber(numberOfTable: 2).tapOnSelectTableBtn()
+        let restaurantScreen2 = RestaurantScreen()
         restaurantScreen2.tapOnCallAWaiterBtn()
         restaurantScreen2.tapOnBringAMenuBtn()
         

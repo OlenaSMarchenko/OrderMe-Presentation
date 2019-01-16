@@ -24,10 +24,8 @@ class DetectTableScreen: BaseScreen {
         return self
     }
     
-    @discardableResult
-    func tapOnSelectTableBtn() -> RestaurantScreen {
+    func tapOnSelectTableBtn()  {
         tap(selectTableBtn)
-        return RestaurantScreen()
     }
 }
 
