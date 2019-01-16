@@ -9,7 +9,7 @@
 import Foundation
 import XCTest
 
-class TestsOrderFood: BaseTest {
+class OrderFoodTests: BaseTest {
     
     func testOrderFoodWithoutLogin () {
         
@@ -32,7 +32,8 @@ class TestsOrderFood: BaseTest {
         let detectTableScreen = DetectTableScreen()
         detectTableScreen.enterTableNumber(numberOfTable: 2).tapOnSelectTableBtn()
         
-        _ = bucketScreen.tapOnAcceptBtn()
+        let bucketScreen2 = BucketScreen()
+        bucketScreen2.tapOnAcceptBtn()
         
         XCTAssertTrue(bucketScreen.didNotLoginAlertExists, "You did not login does not exist")
         bucketScreen.tapOnCancelBtn()

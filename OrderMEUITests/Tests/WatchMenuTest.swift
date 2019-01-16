@@ -12,13 +12,11 @@ import XCTest
 class WatchMenuTest: BaseTest {
     
     func testWatchMenu() {
-        
-    let loginScreen = LoginScreen()
-    loginScreen.tapOnLoginLaterBtn()
-    
-    let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.republique)
-    let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
-    let menuScreen = restaurantScreen.tapOnMenuBtn()
-    menuScreen.tapOnBackBtn()
+        let loginScreen = LoginScreen()
+        loginScreen.tapOnLoginLaterBtn()    
+        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.republique)
+        let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
+        let menuScreen = restaurantScreen.tapOnMenuBtn()
+        menuScreen.tapOnBackBtn()
     }
 }
