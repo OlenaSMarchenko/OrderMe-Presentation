@@ -30,7 +30,7 @@ class TestsOrderFood: BaseTest {
         bucketScreen.tapOnOkBtn()
         
         let detectTableScreen = DetectTableScreen()
-        detectTableScreen.enterTableNumber(numberOfTable: 2).tapOnSelecttableBtn()
+        detectTableScreen.enterTableNumber(numberOfTable: 2).tapOnSelectTableBtn()
         
         _ = bucketScreen.tapOnAcceptBtn()
         
