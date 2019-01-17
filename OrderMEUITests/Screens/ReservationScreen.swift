@@ -11,12 +11,31 @@ import XCTest
 
 class ReservationScreen: BaseScreen {
     
+    private let monthDayPicker = app.pickerWheels.element(boundBy: 0)
+    private let hourPicker = app.pickerWheels.element(boundBy: 1)
+    private let minutePicker = app.pickerWheels.element(boundBy: 2)
+    private let amPmPicker = app.pickerWheels.element(boundBy: 3)
+    
     private let phoneNumberField: XCUIElement = textFields["Phone number"]
     private let numberOfPeopleField: XCUIElement = textFields["Number of people"]
     private let didNotLoginAlert: XCUIElement = alerts["You did not login"]
     private let cancelBtn: XCUIElement = buttons["Cancel"]
     private let bookBtn: XCUIElement = buttons["Book"]
     private let pickADate = staticTexts["Pick a date"]
+    
+    
+    func selectDate(month: String = "Jan",
+                    day: String = "19",
+                    hour: String = "10",
+                    minute: String = "30",
+                    amPm: AmPM = .pm) {
+        let monthDay = "\(month) \(day)"
+        monthDayPicker.adjust(toPickerWheelValue: monthDay)
+        hourPicker.adjust(toPickerWheelValue: hour)
+        minutePicker.adjust(toPickerWheelValue: minute)
+        amPmPicker.adjust(toPickerWheelValue: amPm.rawValue)
+    }
+    
     
     override init() {
         super.init()
