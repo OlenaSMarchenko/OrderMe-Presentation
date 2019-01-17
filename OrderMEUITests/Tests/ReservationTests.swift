@@ -26,4 +26,16 @@ class ReservationTests: BaseTest {
         XCTAssertTrue(reservationScreen.didNotLoginAlertExists, "You did not login does not exist")
         reservationScreen.tapOnCancelBtn()
     }
+    
+    func testPlayWithPickerWheel() {
+        let loginScreen = LoginScreen()
+        loginScreen.tapOnLoginLaterBtn()
+        
+        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.hakkasan)
+        let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
+        restaurantScreen.tapOnReservation()
+        let reservationScreen = ReservationScreen()
+        reservationScreen.selectDate(month: "Feb", day: "25")
+        
+    }
 }
