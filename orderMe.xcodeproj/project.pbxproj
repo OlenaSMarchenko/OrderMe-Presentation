@@ -67,6 +67,7 @@
 		F9ADCD6A21E6974400267707 /* BucketScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6921E6974400267707 /* BucketScreen.swift */; };
 		F9ADCD6C21E6976700267707 /* OrderFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6B21E6976700267707 /* OrderFoodTests.swift */; };
 		F9D0C63C21C06EB800BDEFAB /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D0C63B21C06EB800BDEFAB /* MenuScreen.swift */; };
+		F9D6247621FA84280049CDB4 /* TapBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6247521FA84280049CDB4 /* TapBarProtocol.swift */; };
 		F9E91F7121BF9E9100636551 /* ReservationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E91F7021BF9E9100636551 /* ReservationScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		F9ADCD6921E6974400267707 /* BucketScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketScreen.swift; sourceTree = "<group>"; };
 		F9ADCD6B21E6976700267707 /* OrderFoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFoodTests.swift; sourceTree = "<group>"; };
 		F9D0C63B21C06EB800BDEFAB /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
+		F9D6247521FA84280049CDB4 /* TapBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarProtocol.swift; sourceTree = "<group>"; };
 		F9E91F7021BF9E9100636551 /* ReservationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -367,6 +369,7 @@
 			children = (
 				E1F3287721EFEE7800EA8E52 /* DateExtension.swift */,
 				E1D2E56121FA802200DB61A7 /* BackBtnProtocol.swift */,
+				F9D6247521FA84280049CDB4 /* TapBarProtocol.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				F9ADCD6221E6939500267707 /* ChooseRestaurantsTest.swift in Sources */,
 				F9D0C63C21C06EB800BDEFAB /* MenuScreen.swift in Sources */,
 				E1E8069B21B7440A00133D26 /* SelectRestaurantScreen.swift in Sources */,
+				F9D6247621FA84280049CDB4 /* TapBarProtocol.swift in Sources */,
 				F9ADCD6421E694C300267707 /* WatchMenuTest.swift in Sources */,
 				E1E8069F21B7465500133D26 /* DetectTableScreen.swift in Sources */,
 				F9ADCD6821E6973100267707 /* DishesScreen.swift in Sources */,
