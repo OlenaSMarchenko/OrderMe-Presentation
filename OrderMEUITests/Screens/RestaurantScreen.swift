@@ -18,7 +18,6 @@ class RestaurantScreen: BaseScreen {
     private let bringAMenuBtn: XCUIElement = buttons["Bring a menu"]
     private let gotItAlert: XCUIElement = alerts["Got it!"]
     private let okBtn: XCUIElement = buttons["OK"]
-    private let backBtn: XCUIElement = buttons["Back 50"]
     
     override init() {
         super.init()
@@ -53,10 +52,6 @@ class RestaurantScreen: BaseScreen {
         return MenuScreen()
     }
     
-    func tapOnBackBtn() {
-        tap(backBtn)
-    }
-    
     @discardableResult
     func tapOnReservation() -> ReservationScreen {
         tap(reservationBtn)
@@ -70,3 +65,7 @@ extension RestaurantScreen {
         XCTAssertTrue(callAWaiterBtn.waitForExistence(timeout: timeout), "Restaurant screen is not presented")
     }
 }
+
+// MARK: - BackProtocol
+extension RestaurantScreen: BackProtocol { }
+

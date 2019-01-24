@@ -11,19 +11,12 @@ import XCTest
 
 class MenuScreen: BaseScreen {
     
-    private let backBtn: XCUIElement = buttons["Back 50"]
     private let bucketBtn: XCUIElement = buttons ["Bucket"]
     private let pastaTypeOfFood: XCUIElement = staticTexts ["PASTA"]
     
     override init() {
         super.init()
         visible()
-    }
-    
-    @discardableResult
-    func tapOnBackBtn() -> RestaurantScreen {
-        tap(backBtn)
-        return RestaurantScreen()
     }
     
     func tapOnBucketBtn() {
@@ -38,7 +31,10 @@ class MenuScreen: BaseScreen {
 // MARK: - Visibility
 extension MenuScreen {
     func visible() {
-        XCTAssertTrue(backBtn.waitForExistence(timeout: timeout), "MenuScreen is not presented")
+        XCTAssertTrue(bucketBtn.waitForExistence(timeout: timeout), "MenuScreen is not presented")
     }
 }
+
+// MARK: - BackProtocol
+extension MenuScreen: BackProtocol { }
 
