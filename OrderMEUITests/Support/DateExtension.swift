@@ -8,19 +8,19 @@
 
 import Foundation
 
-//let today = Date()
-//today.plus(days: 3)
 
 enum AmPM: String {
     case am = "AM"
     case pm = "PM"
 }
 
+
 extension Date {
 
     typealias UIData = (day: String, month: String, year: String)
     
     func plus(days: Int) -> UIData? {
+        
         var components = DateComponents()
         components.setValue(days, for: .day)
         guard let futureDate = Calendar.current.date(byAdding: components, to: self) else { return nil}

@@ -10,7 +10,8 @@ import Foundation
 
 protocol TapBarProtocol {
     func goToMyReservations ()
-    }
+}
+
 extension TapBarProtocol {
     func goToMyReservations () {
         let myReservationsBtn = BaseScreen.app.buttons["My Reservations"]
