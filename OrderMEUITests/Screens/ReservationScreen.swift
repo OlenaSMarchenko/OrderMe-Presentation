@@ -23,7 +23,6 @@ class ReservationScreen: BaseScreen {
     private let bookBtn: XCUIElement = buttons["Book"]
     private let pickADate = staticTexts["Pick a date"]
     
-    
     func selectDate(month: String = "Jan",
                     day: String = "19",
                     hour: String = "10",
@@ -36,6 +35,7 @@ class ReservationScreen: BaseScreen {
         amPmPicker.adjust(toPickerWheelValue: amPm.rawValue)
     }
     
+  
     
     override init() {
         super.init()

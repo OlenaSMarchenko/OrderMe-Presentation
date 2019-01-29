@@ -20,7 +20,9 @@ class ReservationTests: BaseTest {
         let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
         let reservationScreen = restaurantScreen.tapOnReservation()
         reservationScreen.enterPhoneNumber(numberOfPhone: 576797847).enterNumberOfPeople(numberOfPeople: 2)
-        //reservationScreen.tapOnPickADate()
+        let today = Date()
+        guard let futureDate = today.plus(days: 3) else { XCTFail("Can't create future date"); return }
+        reservationScreen.selectDate(month: futureDate.month, day: futureDate.day)
         reservationScreen.tapOnBookBtn()
         
         XCTAssertTrue(reservationScreen.didNotLoginAlertExists, "You did not login does not exist")
