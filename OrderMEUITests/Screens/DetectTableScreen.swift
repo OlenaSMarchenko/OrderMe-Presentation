@@ -20,7 +20,7 @@ class DetectTableScreen: BaseScreen {
     }
     
     func enterTableNumber(numberOfTable: Int) -> DetectTableScreen {
-        type(element: tableNumberField, text: numberOfTable.description)
+        type(numberOfTable.description, in: tableNumberField)
         return self
     }
     

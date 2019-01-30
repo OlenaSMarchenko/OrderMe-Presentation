@@ -22,7 +22,7 @@ class BaseScreen {
         element.tap()
     }
     
-    func type(element: XCUIElement, text: String) {
+    func type(_ text: String, in element: XCUIElement) {
         tap(element)
         element.typeText(text)
     }

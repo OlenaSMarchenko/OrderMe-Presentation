@@ -39,5 +39,13 @@ class OrderFoodTests: BaseTest {
         bucketScreen.tapOnCancelBtn()
        
     }
+    
+    func testFacebookLogin() {
+        let loginScreen = LoginScreen()
+        loginScreen.tapOnFacebookBtn()
+        let facebookScreen = FacebookScreen()
+        facebookScreen.loginFacebook()
+    }
+    
 }
 
