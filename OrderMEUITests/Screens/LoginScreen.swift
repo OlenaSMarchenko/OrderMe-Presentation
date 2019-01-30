@@ -12,14 +12,20 @@ import XCTest
 class LoginScreen: BaseScreen {
     
     private let loginLaterButton: XCUIElement = buttons["loginLaterButton"]
+    private let loginFacebookBtn: XCUIElement = buttons["facebookLoginButton"]
     
     override init() {
         super.init()
         visible()
     }
      
-    func tapOnLoginLaterBtn() {
+    func tapOnLoginLaterBtn() { //func skipLogin()
         tap(loginLaterButton)
+    }
+    
+    func tapOnFacebookBtn() { //func loginViaFacebook()
+        tap(loginFacebookBtn)
+        XCUIApplication().tap()
     }
 }
 

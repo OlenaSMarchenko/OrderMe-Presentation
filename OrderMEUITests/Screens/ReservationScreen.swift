@@ -48,13 +48,13 @@ class ReservationScreen: BaseScreen {
 
     @discardableResult
     func enterPhoneNumber(numberOfPhone: Int) -> ReservationScreen {
-        type(element: phoneNumberField, text: numberOfPhone.description)
+        type(numberOfPhone.description, in: phoneNumberField)
         return self
     }
     
     @discardableResult
     func enterNumberOfPeople(numberOfPeople: Int) -> ReservationScreen {
-        type(element: numberOfPeopleField, text: numberOfPeople.description)
+        type(numberOfPeople.description, in: numberOfPeopleField)
         return self
     }
     
