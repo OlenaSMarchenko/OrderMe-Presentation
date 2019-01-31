@@ -63,8 +63,8 @@
 		E1E8069F21B7465500133D26 /* DetectTableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8069E21B7465500133D26 /* DetectTableScreen.swift */; };
 		E1F3287821EFEE7800EA8E52 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F3287721EFEE7800EA8E52 /* DateExtension.swift */; };
 		E8E4BF6160F8C100D1B12500 /* Pods_orderMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BAD16F67A289A8CEBEDC646 /* Pods_orderMe.framework */; };
+		F965C8E52202661A00D939A1 /* OrderFoodFBLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F965C8E42202661A00D939A1 /* OrderFoodFBLogin.swift */; };
 		F9ADCD6221E6939500267707 /* ChooseRestaurantsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6121E6939500267707 /* ChooseRestaurantsTest.swift */; };
-		F9ADCD6421E694C300267707 /* WatchMenuTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6321E694C300267707 /* WatchMenuTest.swift */; };
 		F9ADCD6621E6953900267707 /* ReservationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6521E6953900267707 /* ReservationTests.swift */; };
 		F9ADCD6821E6973100267707 /* DishesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6721E6973100267707 /* DishesScreen.swift */; };
 		F9ADCD6A21E6974400267707 /* BucketScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ADCD6921E6974400267707 /* BucketScreen.swift */; };
@@ -153,8 +153,8 @@
 		E1F3287721EFEE7800EA8E52 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		EDDBFC792085FA8700A45B71 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDBFC7B2085FA9200A45B71 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F965C8E42202661A00D939A1 /* OrderFoodFBLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFoodFBLogin.swift; sourceTree = "<group>"; };
 		F9ADCD6121E6939500267707 /* ChooseRestaurantsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRestaurantsTest.swift; sourceTree = "<group>"; };
-		F9ADCD6321E694C300267707 /* WatchMenuTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMenuTest.swift; sourceTree = "<group>"; };
 		F9ADCD6521E6953900267707 /* ReservationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTests.swift; sourceTree = "<group>"; };
 		F9ADCD6721E6973100267707 /* DishesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesScreen.swift; sourceTree = "<group>"; };
 		F9ADCD6921E6974400267707 /* BucketScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketScreen.swift; sourceTree = "<group>"; };
@@ -347,9 +347,9 @@
 				866D008321831084009F20B1 /* BaseTest.swift */,
 				E15D2CCC21C3293A00E1AD25 /* WaitresTests.swift */,
 				F9ADCD6121E6939500267707 /* ChooseRestaurantsTest.swift */,
-				F9ADCD6321E694C300267707 /* WatchMenuTest.swift */,
 				F9ADCD6521E6953900267707 /* ReservationTests.swift */,
 				F9ADCD6B21E6976700267707 /* OrderFoodTests.swift */,
+				F965C8E42202661A00D939A1 /* OrderFoodFBLogin.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -594,11 +594,11 @@
 				F9D0C63C21C06EB800BDEFAB /* MenuScreen.swift in Sources */,
 				E1E8069B21B7440A00133D26 /* SelectRestaurantScreen.swift in Sources */,
 				F9D6247621FA84280049CDB4 /* TapBarProtocol.swift in Sources */,
-				F9ADCD6421E694C300267707 /* WatchMenuTest.swift in Sources */,
 				E1E8069F21B7465500133D26 /* DetectTableScreen.swift in Sources */,
 				F9ADCD6821E6973100267707 /* DishesScreen.swift in Sources */,
 				E15D2CCD21C3293A00E1AD25 /* WaitresTests.swift in Sources */,
 				E137BE38220119F50010C6F9 /* TestUser.swift in Sources */,
+				F965C8E52202661A00D939A1 /* OrderFoodFBLogin.swift in Sources */,
 				E137BE36220118170010C6F9 /* FacebookScreen.swift in Sources */,
 				E1D2E56221FA802200DB61A7 /* BackBtnProtocol.swift in Sources */,
 				E137BE3A220122440010C6F9 /* XCUIElementExtension.swift in Sources */,
