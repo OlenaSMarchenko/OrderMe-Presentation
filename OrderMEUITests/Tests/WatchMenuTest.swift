@@ -12,11 +12,22 @@ import XCTest
 class WatchMenuTest: BaseTest {
     
     func testWatchMenu() {
-        let loginScreen = LoginScreen()
-        loginScreen.tapOnLoginLaterBtn()    
-        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.republique)
-        let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
-        let menuScreen = restaurantScreen.tapOnMenuBtn()
-        menuScreen.tapOnBackBtn()
+        XCTContext.runActivity(named: "Skip login without faebook") { _ in
+            let loginScreen = LoginScreen()
+            loginScreen.tapOnLoginLaterBtn()
+        }
+        
+        XCTContext.runActivity(named: "Choose repablique restaurant") { _ in
+            let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.republique)
+            selectRestaurantScreen.tapOnRestaurant()
+        }
+        XCTContext.runActivity(named: "Watch menu") { _ in
+            let restaurantScreen = RestaurantScreen()
+            restaurantScreen.tapOnMenuBtn()
+        }
+        XCTContext.runActivity(named: "Return to the restaurant screen") { _ in
+            let menuScreen = MenuScreen()
+            menuScreen.tapOnBackBtn()
+        }        
     }
 }

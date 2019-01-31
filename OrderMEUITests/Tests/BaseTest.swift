@@ -19,7 +19,9 @@ class BaseTest: XCTestCase {
     static let hakkasan = "Hakkasan"
     
     override func setUp() {
+        super.setUp()
         continueAfterFailure = false
+        app.launchArguments = ["deleteAllData"]
         app.launch()
     }        
 }
