@@ -13,16 +13,31 @@ class ChooseRestaurantsTest: BaseTest {
     
     func testChooseTwoRestaurants() {
         
-        let loginScreen = LoginScreen()
-        loginScreen.tapOnLoginLaterBtn()
+        XCTContext.runActivity(named: "Skip login without faebook") { _ in
+            let loginScreen = LoginScreen()
+            loginScreen.tapOnLoginLaterBtn()
+        }
         
-        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.beautyEssex)
-        let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
-        restaurantScreen.tapOnBackBtn()
+        XCTContext.runActivity(named: "Choose beautyEssex restaurant") { _ in
+            let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.beautyEssex)
+            selectRestaurantScreen.tapOnRestaurant()
+        }
         
-        _ = SelectRestaurantScreen(restaurantName: BaseTest.oceanSeafood)
-        selectRestaurantScreen.tapOnRestaurant()
-        let detectTableScreen = restaurantScreen.tapOnDetectTable()
-        detectTableScreen.enterTableNumber(numberOfTable: 6).tapOnSelectTableBtn()
+        XCTContext.runActivity(named: "Tap on back button") { _ in
+            let restaurantScreen = RestaurantScreen()
+            restaurantScreen.tapOnBackBtn()
+        }
+        
+        XCTContext.runActivity(named: "Choose oceanSeafood restaurant") { _ in
+            let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.oceanSeafood)
+            selectRestaurantScreen.tapOnRestaurant()
+        }
+        
+        XCTContext.runActivity(named: "Detect table") { _ in
+            let restaurantScreen = RestaurantScreen()
+            restaurantScreen.tapOnDetectTable()
+            let detectTableScreen = DetectTableScreen()
+            detectTableScreen.enterTableNumber(numberOfTable: 6).tapOnSelectTableBtn()
     }
+  }
 }
