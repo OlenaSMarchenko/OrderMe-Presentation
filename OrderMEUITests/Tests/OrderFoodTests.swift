@@ -37,15 +37,33 @@ class OrderFoodTests: BaseTest {
         
         XCTAssertTrue(bucketScreen.didNotLoginAlertExists, "You did not login does not exist")
         bucketScreen.tapOnCancelBtn()
-       
     }
     
     func testFacebookLogin() {
+  
         let loginScreen = LoginScreen()
         loginScreen.tapOnFacebookBtn()
         let facebookScreen = FacebookScreen()
         facebookScreen.loginFacebook()
+        
+        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.republique)
+        let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
+        let menuScreen = restaurantScreen.tapOnMenuBtn()
+        menuScreen.tapOnPastaTypeOfFood()
+        let dishesScreen = DishesScreen()
+        dishesScreen.tapOnPlusMafaldineDishBtn()
+        dishesScreen.tapOnBucketBtn()
+        let bucketScreen = BucketScreen()
+        bucketScreen.tapOnAcceptBtn()
+
+        XCTAssertTrue(bucketScreen.choseATableAlertExists, "Choose a table does not exist")
+        bucketScreen.tapOnOkBtn()
+
+        let detectTableScreen = DetectTableScreen()
+        detectTableScreen.enterTableNumber(numberOfTable: 2).tapOnSelectTableBtn()
+
+        let bucketScreen2 = BucketScreen()
+        bucketScreen2.tapOnAcceptBtn()
      }
-    
 }
 
