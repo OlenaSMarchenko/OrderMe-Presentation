@@ -55,15 +55,15 @@ class OrderFoodTests: BaseTest {
         dishesScreen.tapOnBucketBtn()
         let bucketScreen = BucketScreen()
         bucketScreen.tapOnAcceptBtn()
-
+        
         XCTAssertTrue(bucketScreen.choseATableAlertExists, "Choose a table does not exist")
         bucketScreen.tapOnOkBtn()
-
+        
         let detectTableScreen = DetectTableScreen()
         detectTableScreen.enterTableNumber(numberOfTable: 2).tapOnSelectTableBtn()
-
+        
         let bucketScreen2 = BucketScreen()
         bucketScreen2.tapOnAcceptBtn()
-     }
+    }
 }
 
