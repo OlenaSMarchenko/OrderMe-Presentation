@@ -39,5 +39,5 @@ class ChooseRestaurantsTest: BaseTest {
             let detectTableScreen = DetectTableScreen()
             detectTableScreen.enterTableNumber(numberOfTable: 6).tapOnSelectTableBtn()
     }
- }
+  }
 }
