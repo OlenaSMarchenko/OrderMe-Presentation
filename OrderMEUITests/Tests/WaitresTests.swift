@@ -9,17 +9,17 @@
 import Foundation
 import XCTest
 
-class WaiterTests: BaseTest {
+class WaiterTests: BaseStubTest {
     
     func testBringAMenu() {
         
-        XCTContext.runActivity(named: "Skip login without faebook") { _ in
-            let loginScreen = LoginScreen()
-            loginScreen.tapOnLoginLaterBtn()
-        }
+//        XCTContext.runActivity(named: "Skip login without faebook") { _ in
+//            let loginScreen = LoginScreen()
+//            loginScreen.tapOnLoginLaterBtn()
+//        }
         
         XCTContext.runActivity(named: "Choose repablique restaurant") { _ in
-            let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.oceanSeafood)
+            let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseStubTest.republique)
             selectRestaurantScreen.tapOnRestaurant()
         }
         

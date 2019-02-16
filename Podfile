@@ -15,3 +15,8 @@ target "orderMe" do
 	pod 'Crashlytics'
 	pod 'SwiftLint'
 end
+
+target "OrderMEUITests" do
+	pod 'EnvoyAmbassador', '~> 4.0'
+	pod 'Embassy', '~> 4.0'
+end

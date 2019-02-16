@@ -50,10 +50,13 @@
 		4390A4592031D58A00E1CD80 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4390A4582031D58A00E1CD80 /* Constants.swift */; };
 		43A8036F203EDF5F005C6EB6 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A8036E203EDF5F005C6EB6 /* AccessibilityIdentifiers.swift */; };
 		43B95CEC2059716B00E8C016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B95CEB2059716B00E8C016 /* LaunchScreen.storyboard */; };
+		57B67D6034AEBE71316900AD /* Pods_OrderMEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E078C118644F1F4B98483F /* Pods_OrderMEUITests.framework */; };
 		866D008421831084009F20B1 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D008321831084009F20B1 /* BaseTest.swift */; };
 		E137BE36220118170010C6F9 /* FacebookScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137BE35220118170010C6F9 /* FacebookScreen.swift */; };
 		E137BE38220119F50010C6F9 /* TestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137BE37220119F50010C6F9 /* TestUser.swift */; };
 		E137BE3A220122440010C6F9 /* XCUIElementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137BE39220122440010C6F9 /* XCUIElementExtension.swift */; };
+		E14C481922177CD30037B8CC /* BaseStubTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14C481822177CD30037B8CC /* BaseStubTest.swift */; };
+		E15A81572217832D00116CFC /* OrderMeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15A81562217832D00116CFC /* OrderMeRouter.swift */; };
 		E15D2CCD21C3293A00E1AD25 /* WaitresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D2CCC21C3293A00E1AD25 /* WaitresTests.swift */; };
 		E1D2E56221FA802200DB61A7 /* BackBtnProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2E56121FA802200DB61A7 /* BackBtnProtocol.swift */; };
 		E1E8069721B73D5700133D26 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8069621B73D5700133D26 /* LoginScreen.swift */; };
@@ -142,6 +145,8 @@
 		E137BE35220118170010C6F9 /* FacebookScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookScreen.swift; sourceTree = "<group>"; };
 		E137BE37220119F50010C6F9 /* TestUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUser.swift; sourceTree = "<group>"; };
 		E137BE39220122440010C6F9 /* XCUIElementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementExtension.swift; sourceTree = "<group>"; };
+		E14C481822177CD30037B8CC /* BaseStubTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStubTest.swift; sourceTree = "<group>"; };
+		E15A81562217832D00116CFC /* OrderMeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMeRouter.swift; sourceTree = "<group>"; };
 		E15D2CCC21C3293A00E1AD25 /* WaitresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitresTests.swift; sourceTree = "<group>"; };
 		E1D2E56121FA802200DB61A7 /* BackBtnProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBtnProtocol.swift; sourceTree = "<group>"; };
 		E1E8069621B73D5700133D26 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -167,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B67D6034AEBE71316900AD /* Pods_OrderMEUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +382,8 @@
 				F9D6247521FA84280049CDB4 /* TapBarProtocol.swift */,
 				E137BE37220119F50010C6F9 /* TestUser.swift */,
 				E137BE39220122440010C6F9 /* XCUIElementExtension.swift */,
+				E14C481822177CD30037B8CC /* BaseStubTest.swift */,
+				E15A81562217832D00116CFC /* OrderMeRouter.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -398,9 +406,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22FB825521758B760004B281 /* Build configuration list for PBXNativeTarget "OrderMEUITests" */;
 			buildPhases = (
+				F3D0250A9767729743F04540 /* [CP] Check Pods Manifest.lock */,
 				22FB824821758B710004B281 /* Sources */,
 				22FB824921758B710004B281 /* Frameworks */,
 				22FB824A21758B710004B281 /* Resources */,
+				8077E47170A4F9E6EA7E312C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -526,6 +536,30 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 5d0fab03cfdfe7cc226ea2d20f67e431b3a3e96e 2906fe386f0925971771ae22678c399eb7ce309965acfe92281f2951f995f912\n";
 		};
+		8077E47170A4F9E6EA7E312C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OrderMEUITests/Pods-OrderMEUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Embassy/Embassy.framework",
+				"${BUILT_PRODUCTS_DIR}/EnvoyAmbassador/EnvoyAmbassador.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Embassy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EnvoyAmbassador.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrderMEUITests/Pods-OrderMEUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		842538B1ECA89D2A457917D9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -550,7 +584,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-orderMe/Pods-orderMe-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-orderMe/Pods-orderMe-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
@@ -577,7 +611,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-orderMe/Pods-orderMe-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-orderMe/Pods-orderMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3D0250A9767729743F04540 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrderMEUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -591,6 +647,7 @@
 				F9D0C63C21C06EB800BDEFAB /* MenuScreen.swift in Sources */,
 				E1E8069B21B7440A00133D26 /* SelectRestaurantScreen.swift in Sources */,
 				F9D6247621FA84280049CDB4 /* TapBarProtocol.swift in Sources */,
+				E14C481922177CD30037B8CC /* BaseStubTest.swift in Sources */,
 				E1E8069F21B7465500133D26 /* DetectTableScreen.swift in Sources */,
 				F9ADCD6821E6973100267707 /* DishesScreen.swift in Sources */,
 				E15D2CCD21C3293A00E1AD25 /* WaitresTests.swift in Sources */,
@@ -605,6 +662,7 @@
 				F9ADCD6C21E6976700267707 /* OrderFoodTests.swift in Sources */,
 				E1E8069721B73D5700133D26 /* LoginScreen.swift in Sources */,
 				F9ADCD6A21E6974400267707 /* BucketScreen.swift in Sources */,
+				E15A81572217832D00116CFC /* OrderMeRouter.swift in Sources */,
 				F9ADCD6621E6953900267707 /* ReservationTests.swift in Sources */,
 				E1E8069921B740B500133D26 /* BaseScreen.swift in Sources */,
 			);
@@ -670,6 +728,7 @@
 /* Begin XCBuildConfiguration section */
 		22FB825321758B720004B281 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1976FAADE5304B218A816420 /* Pods-OrderMEUITests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -696,6 +755,7 @@
 		};
 		22FB825421758B720004B281 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A1E6C06FD11E1DB88A716D9 /* Pods-OrderMEUITests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
