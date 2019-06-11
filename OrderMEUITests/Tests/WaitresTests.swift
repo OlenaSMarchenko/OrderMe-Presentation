@@ -9,14 +9,14 @@
 import Foundation
 import XCTest
 
-class WaiterTests: BaseStubTest {
+class WaiterTests: BaseTest {
     
     func testBringAMenu() {
         
-//        XCTContext.runActivity(named: "Skip login without faebook") { _ in
-//            let loginScreen = LoginScreen()
-//            loginScreen.tapOnLoginLaterBtn()
-//        }
+        XCTContext.runActivity(named: "Skip login without faebook") { _ in
+            let loginScreen = LoginScreen()
+            loginScreen.tapOnLoginLaterBtn()
+        }
         
         XCTContext.runActivity(named: "Choose repablique restaurant") { _ in
             let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseStubTest.republique)
@@ -41,7 +41,7 @@ class WaiterTests: BaseStubTest {
 
     func testWatchMenu() {
         
-        XCTContext.runActivity(named: "Skip login without faebook") { _ in
+        XCTContext.runActivity(named: "Skip login") { _ in
             let loginScreen = LoginScreen()
             loginScreen.tapOnLoginLaterBtn()
         }

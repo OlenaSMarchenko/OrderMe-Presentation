@@ -10,7 +10,8 @@ import Foundation
 import XCTest
 
 class FacebookScreen: BaseScreen {
-    private let alertContinue = alerts["“OrderME” Wants to Use “facebook.com” to Sign In"].buttons["Continue"]
+//    private let alertContinue = alerts["“OrderME” Wants to Use “facebook.com” to Sign In"]
+//    private let alertContinueBtn = buttons["Continue"]
     
     private let emailOrPhoneField = app.webViews.textFields.element(boundBy: 0)
     private let passwordField = app.webViews.secureTextFields.element(boundBy: 0)
@@ -18,6 +19,7 @@ class FacebookScreen: BaseScreen {
     private let continueBtn = buttons["Continue"]
     
     func loginFacebook() {
+        
         if continueBtn.waitForExistence(timeout: timeout) {
             tap(continueBtn)
             return

@@ -11,6 +11,9 @@ import XCTest
 
 class LoginScreen: BaseScreen {
     
+    private let alertContinue = alerts["“OrderME” Wants to Use “facebook.com” to Sign In"]
+    private let alertContinueBtn = buttons["Continue"]
+    
     private let loginLaterButton: XCUIElement = buttons["loginLaterButton"]
     private let loginFacebookBtn: XCUIElement = buttons["facebookLoginButton"]
     
@@ -25,6 +28,9 @@ class LoginScreen: BaseScreen {
     
     func tapOnFacebookBtn() { //func loginViaFacebook()
         tap(loginFacebookBtn)
+        if alertContinue.waitForExistence(timeout: 5) {
+            alertContinueBtn.tap()
+        }
         XCUIApplication().tap()
     }
 }
