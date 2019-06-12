@@ -9,6 +9,6 @@
 import Foundation
 
 struct TestUser {
-    static let email = "bayqaigordor@gmail.com"
-    static let password = "bayqaigordor123"
+    static let email = "+16692526082"
+    static let password = "gfhjkm19011988"
 }

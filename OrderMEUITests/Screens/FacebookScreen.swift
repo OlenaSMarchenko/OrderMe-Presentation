@@ -29,6 +29,7 @@ class FacebookScreen: BaseScreen {
         type(TestUser.email, in: emailOrPhoneField)
         type(TestUser.password, in: passwordField)
         tap(loginBtn)
+        print(BaseScreen.app.debugDescription)
         tap(continueBtn)
     }
     

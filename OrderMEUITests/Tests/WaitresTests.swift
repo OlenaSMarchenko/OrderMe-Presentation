@@ -61,5 +61,17 @@ class WaiterTests: BaseTest {
             menuScreen.tapOnBackBtn()
         }
     }
+    
+    func testPlayWithPickerWheel() {
+        let loginScreen = LoginScreen()
+        loginScreen.tapOnLoginLaterBtn()
+        
+        let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.hakkasan)
+        let restaurantScreen = selectRestaurantScreen.tapOnRestaurant()
+        restaurantScreen.tapOnReservation()
+        let reservationScreen = ReservationScreen()
+        reservationScreen.selectDate(month: "Feb", day: "25")
+        
+    }
 }
 

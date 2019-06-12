@@ -39,6 +39,11 @@
                BlueprintName = "OrderMEUITests"
                ReferencedContainer = "container:orderMe.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "ReservationTests/testPlayWithPickerWheel()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

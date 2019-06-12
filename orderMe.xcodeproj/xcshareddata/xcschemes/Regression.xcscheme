@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,6 +17,20 @@
                BlueprintIdentifier = "2B2EA7681CBB0377001507DD"
                BuildableName = "OrderME.app"
                BlueprintName = "orderMe"
+               ReferencedContainer = "container:orderMe.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "22FB824B21758B710004B281"
+               BuildableName = "OrderMEUITests.xctest"
+               BlueprintName = "OrderMEUITests"
                ReferencedContainer = "container:orderMe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -39,28 +53,10 @@
             </BuildableReference>
             <SkippedTests>
                <Test
-                  Identifier = "BaseTest">
+                  Identifier = "ChooseRestaurantsTest">
                </Test>
                <Test
-                  Identifier = "CallWaiterTest">
-               </Test>
-               <Test
-                  Identifier = "FindRestaurantFromList">
-               </Test>
-               <Test
-                  Identifier = "OrderWithoutFacebook">
-               </Test>
-               <Test
-                  Identifier = "OrdersTest">
-               </Test>
-               <Test
-                  Identifier = "ReservationTest">
-               </Test>
-               <Test
-                  Identifier = "StubbingBaseTest">
-               </Test>
-               <Test
-                  Identifier = "VisualValidationTest">
+                  Identifier = "OrderFoodTests/testOrderFoddWithFacebook()">
                </Test>
             </SkippedTests>
          </TestableReference>

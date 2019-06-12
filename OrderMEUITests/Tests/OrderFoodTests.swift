@@ -39,11 +39,12 @@ class OrderFoodTests: BaseTest {
         bucketScreen.tapOnCancelBtn()
     }
     
-    func testFacebookLogin() {
-        
+    func testOrderFoddWithFacebook() {
+
         let loginScreen = LoginScreen()
         loginScreen.tapOnFacebookBtn()
         let facebookScreen = FacebookScreen()
+        print(BaseScreen.app.debugDescription)
         facebookScreen.loginFacebook()
         
         let selectRestaurantScreen = SelectRestaurantScreen(restaurantName: BaseTest.republique)
