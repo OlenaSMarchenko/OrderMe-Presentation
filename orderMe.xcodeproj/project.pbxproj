@@ -52,6 +52,7 @@
 		43B95CEC2059716B00E8C016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B95CEB2059716B00E8C016 /* LaunchScreen.storyboard */; };
 		57B67D6034AEBE71316900AD /* Pods_OrderMEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E078C118644F1F4B98483F /* Pods_OrderMEUITests.framework */; };
 		866D008421831084009F20B1 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D008321831084009F20B1 /* BaseTest.swift */; };
+		E11D873E22B09DFA00B4EC5D /* SmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11D873D22B09DFA00B4EC5D /* SmokeTests.swift */; };
 		E137BE36220118170010C6F9 /* FacebookScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137BE35220118170010C6F9 /* FacebookScreen.swift */; };
 		E137BE38220119F50010C6F9 /* TestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137BE37220119F50010C6F9 /* TestUser.swift */; };
 		E137BE3A220122440010C6F9 /* XCUIElementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137BE39220122440010C6F9 /* XCUIElementExtension.swift */; };
@@ -142,6 +143,7 @@
 		866D008321831084009F20B1 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		A02526015C2AC40E8E286088 /* Pods-orderMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orderMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-orderMe/Pods-orderMe.debug.xcconfig"; sourceTree = "<group>"; };
 		B2E078C118644F1F4B98483F /* Pods_OrderMEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderMEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11D873D22B09DFA00B4EC5D /* SmokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeTests.swift; sourceTree = "<group>"; };
 		E137BE35220118170010C6F9 /* FacebookScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookScreen.swift; sourceTree = "<group>"; };
 		E137BE37220119F50010C6F9 /* TestUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUser.swift; sourceTree = "<group>"; };
 		E137BE39220122440010C6F9 /* XCUIElementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementExtension.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				F9ADCD6121E6939500267707 /* ChooseRestaurantsTest.swift */,
 				F9ADCD6521E6953900267707 /* ReservationTests.swift */,
 				F9ADCD6B21E6976700267707 /* OrderFoodTests.swift */,
+				E11D873D22B09DFA00B4EC5D /* SmokeTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				E14C481922177CD30037B8CC /* BaseStubTest.swift in Sources */,
 				E1E8069F21B7465500133D26 /* DetectTableScreen.swift in Sources */,
 				F9ADCD6821E6973100267707 /* DishesScreen.swift in Sources */,
+				E11D873E22B09DFA00B4EC5D /* SmokeTests.swift in Sources */,
 				E15D2CCD21C3293A00E1AD25 /* WaitresTests.swift in Sources */,
 				E137BE38220119F50010C6F9 /* TestUser.swift in Sources */,
 				E137BE36220118170010C6F9 /* FacebookScreen.swift in Sources */,

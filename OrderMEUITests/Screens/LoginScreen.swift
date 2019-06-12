@@ -21,12 +21,12 @@ class LoginScreen: BaseScreen {
         super.init()
         visible()
     }
-     
-    func tapOnLoginLaterBtn() { //func skipLogin()
+    
+    func tapOnLoginLaterBtn() {
         tap(loginLaterButton)
     }
     
-    func tapOnFacebookBtn() { //func loginViaFacebook()
+    func tapOnFacebookBtn() {
         tap(loginFacebookBtn)
         if alertContinue.waitForExistence(timeout: 5) {
             alertContinueBtn.tap()
