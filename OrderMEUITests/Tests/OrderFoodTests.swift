@@ -35,8 +35,8 @@ class OrderFoodTests: BaseTest {
         let bucketScreen2 = BucketScreen()
         bucketScreen2.tapOnAcceptBtn()
         
-        XCTAssertTrue(bucketScreen.didNotLoginAlertExists, "You did not login does not exist")
-        bucketScreen.tapOnCancelBtn()
+//        XCTAssertTrue(bucketScreen.didNotLoginAlertExists, "You did not login does not exist")
+//        bucketScreen.tapOnCancelBtn()
     }
     
     func testOrderFoddWithFacebook() {
